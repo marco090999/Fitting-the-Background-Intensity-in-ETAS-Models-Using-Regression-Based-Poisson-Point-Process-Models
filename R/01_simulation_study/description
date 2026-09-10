@@ -1,0 +1,34 @@
+# R/01_simulation_study
+
+Core model-fitting and simulation code underlying the entire paper.
+
+This folder defines the three ETAS estimators compared throughout the
+manuscript — classical kernel-based ETAS, its FLP-enhanced version
+(ETAS-FLP), and the proposed regression-based background estimator
+(ETAS-P) — together with the synthetic-catalogue simulator and the main
+simulation plan used to evaluate them.
+
+## Files
+
+- **`etas_parametric_final_plan_no_smooth.R`**
+  Defines `etasclass()` (classical ETAS; also fits ETAS-FLP via the
+  `flp=TRUE` argument) and `etasclass.par()` (the proposed ETAS-P
+  estimator), the ETAS catalogue simulator (`etas.par.sim_v4()`), and
+  orchestrates the main simulation plan together with the four original
+  secondary sensitivity analyses (catalogue size, background
+  misspecification, local background irregularity, extreme triggering).
+  Produces Tables S1–S8 of the Supplementary Information and Figures 1–6
+  of the main text.
+
+- **`add_etas_flp_to_existing_results_NO_OVERWRITE_v3.R`**
+  A companion script that adds the ETAS-FLP fit to catalogues already
+  simulated by the main plan above, without overwriting the existing
+  ETAS/ETAS-P results for the same replicates. It reads the saved `.rds`
+  outputs of the main plan and does not generate any new synthetic data.
+
+## Dependency order
+
+Run `etas_parametric_final_plan_no_smooth.R` first (it defines the
+functions used everywhere else in the repository and produces the main
+simulation output); `add_etas_flp_to_existing_results_NO_OVERWRITE_v3.R`
+is run afterwards, pointed at the same output directory.
