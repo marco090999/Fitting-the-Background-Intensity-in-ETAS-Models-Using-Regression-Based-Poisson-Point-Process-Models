@@ -1,0 +1,27 @@
+# R/02_application
+
+Empirical application of the three ETAS estimators to a real earthquake
+catalogue.
+
+This folder contains the script that fits ETAS, ETAS-FLP, and ETAS-P to
+the Italian earthquake catalogue `catalog.withcov`, distributed with the
+`etasFLP` R package, using distance to the nearest mapped fault as a
+spatial covariate in both the triggering and (for ETAS-P) the background
+component.
+
+## Files
+
+- **`studio_simulazione_etas_parametrico.R`**
+  Fits the three models with `magn.threshold = 2.5` (the completeness
+  threshold used throughout the main analysis) and
+  `magn.threshold.back = 3.9`. Produces Table 2 (estimated ETAS
+  parameters) and Table 3 (background component summary) of the main
+  text, and Figures 7–8 (spatial distribution of the catalogue and
+  fitted intensities).
+
+## Note
+
+This script depends only on the `etasclass()`/`etasclass.par()`
+definitions in `R/01_core_estimation/etas_parametric_final_plan_no_smooth.R`
+and on the `catalog.withcov` dataset bundled with `etasFLP`; it does not
+require any of the simulation outputs from `01_core_estimation`.
