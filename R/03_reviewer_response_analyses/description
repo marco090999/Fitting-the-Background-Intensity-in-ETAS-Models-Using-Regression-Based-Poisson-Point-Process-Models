@@ -1,0 +1,33 @@
+# R/03_reviewer_response_analyses
+
+Additional analyses carried out in response to reviewer comments during
+peer review.
+
+Each script in this folder addresses one specific point raised by the
+reviewers and produces the corresponding table(s) in the Supplementary
+Information. Two exploration scripts collect and summarise the raw output
+of the two most computation-heavy analyses.
+
+## Files
+
+| Script | Reviewer comment | Produces |
+|---|---|---|
+| `etas_nonstationary_background_robustness_check.R` | Reviewer 1, points 1–2: scope of the model relative to genuinely nonstationary ETAS formulations; robustness to an unmodelled linear trend in the background rate | SI Sec. S2.5, Tables S9–S11 |
+| `etas_coverage_bootstrap.R` | Reviewer 1, point 3: coverage of conditional vs. parametric-bootstrap confidence intervals for the background regression coefficients, validated on simulated data with known truth | SI Sec. S2.6, Table S12 |
+| `catalog_completeness_analysis.R` | Reviewer 1, point 5 / Reviewer 3: completeness magnitude $M_c$ vs. the estimation threshold $M_0$ | SI Sec. S3.1, Table S13 |
+| `m0_sensitivity_application.R` | Reviewer 1, point 5 / Reviewer 3: sensitivity of the empirical application to the completeness threshold $M_0$ | SI Sec. S3.1, Tables S14–S15 |
+| `etas_application_bootstrap.R` | Reviewer 1, point 3: parametric bootstrap of the complete alternating procedure, applied directly to the empirical fit reported in the main text | SI Sec. S3.2, Table S16 |
+| `explore_nonstationary_results.R` | — (exploration/reporting) | Console tables and diagnostic plots for `etas_nonstationary_background_robustness_check.R` |
+| `explore_coverage_bootstrap_results.R` | — (exploration/reporting) | Console tables and diagnostic plots for `etas_coverage_bootstrap.R` |
+
+## Notes
+
+- These scripts depend on the estimator definitions in
+  `R/01_core_estimation/` and, for the application-related analyses, on
+  the fitted model from `R/02_application/`.
+- Several scripts are computationally intensive (parametric bootstraps
+  with 30–150 replicates, each requiring a full refit of the alternating
+  ETAS-P procedure) and checkpoint their progress incrementally, so they
+  can be safely interrupted and resumed. See the comment header of each
+  script for the relevant environment variables (mode of execution,
+  number of parallel cores, output directory).
