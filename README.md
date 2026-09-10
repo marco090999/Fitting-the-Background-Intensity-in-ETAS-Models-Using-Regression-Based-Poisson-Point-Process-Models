@@ -105,7 +105,7 @@ catalogue is loaded automatically once the package is attached.
 
 If you use this code, please cite the manuscript above (full reference to
 be updated upon acceptance) and, where applicable, this repository via its
-Zenodo DOI: **[to be added once the Zenodo release is created]**.
+Zenodo DOI.
 
 ## License
 
