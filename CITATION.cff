@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "Code and data analysis scripts for: Fitting the Background Intensity in ETAS Models Using Regression-Based Poisson Point Process Models"
+version: 1.0.0
+date-released: 'YYYY-MM-DD'
+abstract: >-
+  R code implementing a regression-based background ETAS model (ETAS-P),
+  together with the classical kernel-based ETAS and ETAS-FLP estimators
+  used as benchmarks, the simulation study, the application to the
+  Italian earthquake catalogue, and additional analyses carried out in
+  response to peer review. Accompanies the manuscript "Fitting the
+  Background Intensity in ETAS Models Using Regression-Based Poisson
+  Point Process Models", submitted to Stochastic Environmental Research
+  and Risk Assessment.
+authors:
+  - family-names: "Tarantino"
+    given-names: "Marco"
+    affiliation: "Department of Economics, Business and Statistics, University of Palermo, Italy"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "D'Angelo"
+    given-names: "Nicoletta"
+    affiliation: "Department of Economics, Business and Statistics, University of Palermo, Italy"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Chiodi"
+    given-names: "Marcello"
+    affiliation: "Department of Economics, Business and Statistics, University of Palermo, Italy"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Adelfio"
+    given-names: "Giada"
+    affiliation: "Department of Economics, Business and Statistics, University of Palermo, Italy"
+    email: "giada.adelfio@unipa.it"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/USERNAME/REPOSITORY-NAME"
+url: "https://github.com/USERNAME/REPOSITORY-NAME"
+license: Apache-2.0
+keywords:
+  - ETAS
+  - point process
+  - earthquake background rate
+  - spatial statistics
+  - Poisson regression
+  - seismicity declustering
+  - GAM
+preferred-citation:
+  type: article
+  title: "Fitting the Background Intensity in ETAS Models Using Regression-Based Poisson Point Process Models"
+  authors:
+    - family-names: "Tarantino"
+      given-names: "Marco"
+    - family-names: "D'Angelo"
+      given-names: "Nicoletta"
+    - family-names: "Chiodi"
+      given-names: "Marcello"
+    - family-names: "Adelfio"
+      given-names: "Giada"
+  journal: "Stochastic Environmental Research and Risk Assessment"
+  status: submitted
+  # year: YYYY
+  # volume: ""
+  # issue: ""
+  # start: ""
+  # end: ""
+  # doi: "10.XXXX/XXXXXXX"
